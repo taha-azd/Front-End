@@ -1,0 +1,84 @@
+@media (min-width: 716px) { 
+    .project-section{
+        .row:nth-child(even){
+            flex-direction: row-reverse !important;
+        }
+        .row:nth-child(odd){
+            flex-direction: row !important;
+        }
+    }
+}
+.project-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .top-part{
+        text-align: center;
+        >h2{
+            font-size: 3rem;
+            text-transform: uppercase;
+        }
+        padding: 50px 0;
+    }
+    .row{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+        border-radius: 20px;
+        overflow: hidden;
+        &:hover{
+            >.prjct-view{
+                >img{
+                    transform: scale(1.1);
+                }
+            }
+        }
+        .prjct-expln{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 400px;
+            flex-basis: 50%;
+            background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+            padding: 20px;
+            color: white;
+            h4{
+                margin: 10px 0;
+                font-size: 2.5rem;
+            }
+            h6{
+                margin: 10px 0;
+                font-size: 1rem;
+            }
+            p{
+                line-height: $lin-ht;
+            }
+        }
+        .prjct-view{
+            height: 400px;
+            overflow: hidden;
+            flex-basis: 50%;
+            position: relative;
+            img{
+                object-fit: cover;
+                height: 100%;
+                width: 100%;
+                 transition: transform .5s ease;
+            }
+            &:after{
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+                opacity: .7;
+            }
+      
+        }
+    }
+}

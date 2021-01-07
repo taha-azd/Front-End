@@ -1,0 +1,103 @@
+.navbar{
+    background-color: #fff;
+    padding: 1rem;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    @media screen and (min-width:768px){
+        padding: 0;
+    }
+    .nav-head{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #fff;
+        width: 100%;
+        @media screen and (min-width:768px) {
+            display: none;
+        }
+        &.active{
+            >.hamberger{
+                width: 0;
+                &::after,
+                &::before{
+                    width: 30px;
+                }
+                &::after{
+                    transform: rotate(45deg) translateX(-11px);
+                }
+                &::before{
+                    transform: rotate(-45deg)translateX(-11px);;
+                } 
+            }
+        }
+    }
+    .slide-menu{
+        position: absolute;
+        top: 0px;
+        width: 100vw;
+        min-height: 100vh;
+        right: 100%;
+        z-index: 5;
+        transition: right 1s ease-in-out;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        padding-left: 1rem;
+        overflow: auto;
+        margin-top: 52px;
+        @media screen and (min-width:768px){
+            width: 20%;
+            right: 0%;
+        }
+        &.active{
+            right: 0%;
+        }
+        p{
+            padding-bottom: .5rem;
+            text-transform: uppercase;
+            align-self: baseline;
+            &:nth-child(1){
+                letter-spacing: 0.3em;
+                padding-bottom: 2rem;
+                padding-top: 3rem;
+            }
+            &:hover{
+                color: $main-color;
+            }
+        }
+    }
+    .hamberger{
+        position: relative;
+        height: 4px;
+        width: 15px;
+        background-color: #000;
+        &::after{
+            content: '';
+            position: absolute;
+            top: 8px;
+            height: 4px;
+            width: 40px;
+            background-color: #000;
+            transition: transform 2s ease;
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            bottom: 8px;
+            height: 4px;
+            width: 30px;
+            background-color: #000;
+            transition: transform .1s ease;
+
+        }
+    }
+    .page-number{
+        p{
+            padding-bottom: 0;
+        }
+    }
+}
+

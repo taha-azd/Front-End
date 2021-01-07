@@ -1,0 +1,140 @@
+@keyframes fill_80{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 80%;
+    }
+}
+@keyframes fill_95{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 95%;
+    }
+}
+@keyframes fill_60{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 60%;
+    }
+}
+@keyframes fill_70{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 70%;
+    }
+}
+.resume{
+    .time-line{
+        padding: 1rem;
+        font-size: 18px;
+        p{
+            color: #fff;
+            &:nth-child(odd)
+            {
+                font-weight: lighter;
+                font-size: 3rem;
+                padding-bottom: unset;
+            }
+        }
+    }
+    .my-skills{
+        padding-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        @media screen  and (min-width:768px){
+                flex-direction: row;
+                flex-wrap: wrap;
+        }
+        li{
+            list-style-type: none;
+            @media screen and (min-width:768px){
+                width: 50%;
+                &:nth-child(even){
+                    padding-left: 1rem;
+                }
+                &:nth-child(odd){
+                    padding-right: 1rem;
+                }
+            }
+            &:nth-child(1){
+                >div{
+                    &::after{
+                        animation-name: fill_95;
+                    }
+                }
+            }
+            &:nth-child(2){
+                >div{
+                    &::after{
+                        animation-name: fill_80;
+                    }
+                }
+            }
+            &:nth-child(3){
+                >div{
+                    &::after{
+                        animation-name: fill_60;
+                    }
+                }
+            }
+            &:nth-child(4){
+                div{
+                    &::after{
+                        animation-name: fill_70;
+                    }
+                }
+            }
+            &:nth-child(5){
+                >div{
+                    &::after{
+                        animation-name: fill_80;
+                    }
+                } 
+            }
+            &:nth-child(6){
+                div{
+                    &::after{
+                        animation-name: fill_60;
+                    }
+                }
+            }
+            
+            p{
+                padding-bottom: 0.5rem;
+            }
+            div{
+                width: 100%;
+                height: 15px;
+                background-color: #ffd2d3;
+                position: relative;
+                
+                
+               
+                
+
+                
+                &::after{
+                    content: '';
+                    width: 0%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    opacity: .8;
+                    background-color: $main-color;
+                    animation-timing-function: ease;
+                    animation-duration: .8s;
+                    animation-fill-mode: forwards;
+                }
+            }
+        }
+    }
+
+}

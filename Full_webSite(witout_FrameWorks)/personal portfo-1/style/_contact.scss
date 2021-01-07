@@ -1,0 +1,65 @@
+@media (min-width: 768px){
+    .contact-section{
+        .row{
+            flex-direction: row !important;
+            justify-content: space-evenly !important;
+            .ticket{
+                margin-bottom: 0;
+                flex-direction: row;
+                >div:first-child{
+                    padding-right: 1rem;
+                }
+                >div:last-child{
+                    p{
+                        text-align: left;
+                    }
+                }
+            }
+        }
+    }
+}
+.contact-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    .top{
+        h2{
+            text-transform: uppercase;
+            font-weight: lighter;
+        }
+        margin-bottom: 50px;
+    }
+    .contact-info{
+        width: 100%;
+        >.row{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+    }
+    .ticket{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        padding: 20px;
+        margin-bottom: 2rem;
+        box-shadow: 0px 0px 18px 0 #0000002c;
+        &:hover{
+            box-shadow: 0px 0px 5px 0 #0000002c;
+        }
+        p{
+            text-align: center;
+            line-height: $lin-ht;
+            &:first-child{
+                text-transform: capitalize;
+                font-weight: 900;
+                
+            }
+        }
+    }
+    
+}

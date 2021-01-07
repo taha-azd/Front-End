@@ -1,0 +1,33 @@
+.skills-sec{
+    padding-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @media screen and (min-width:768px) {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .card{
+        padding-bottom: 2rem;
+        width: 100%;
+        
+        &:hover{
+            >h3{
+                transform: translateX(-20px);
+            }
+        }
+        @media screen and (min-width:768px) {
+            width: 45%;
+            padding-left: 2rem;
+        }
+    }
+    h3{
+        letter-spacing: 0.3em;
+        padding: 1rem 0;
+        text-transform: uppercase;
+        transition: transform .8s ease;
+    }
+    p{
+        max-width: 70vw;
+    }
+}

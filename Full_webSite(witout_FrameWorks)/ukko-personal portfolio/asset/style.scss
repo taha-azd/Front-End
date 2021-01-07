@@ -1,0 +1,53 @@
+@font-face{
+    font-family: comedy;
+    src: url('../font/Stanberry.ttf');
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family:comedy;
+    z-index: 1;
+    &.overflow-hide{
+        overflow-y: hidden;
+    }
+}
+$main-color:#f44647;
+.main-text{
+    color:$main-color;
+}
+.main-bg{
+    background-color: $main-color;
+}
+.container{
+    width: 100%;
+    padding: 0 1rem;
+    margin: 0 auto;
+    background-color: #d2bbbb;
+    @media screen and (min-width:768px) {
+        width: 80%;
+        margin:0;
+    }
+}
+p{
+    font-size: 25px;
+    line-height: 2rem;
+    padding-bottom: 2rem;
+}
+.title{
+    padding: 3rem 0;
+    margin-bottom: 1.2rem;
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+@import 'navbar';
+@import 'header';
+@import 'servise-sec';
+@import 'skills-sec';
+@import 'about-sec';
+@import 'portfolio-sec';
+@import 'blog-sec';
+@import 'resume';
+@import 'contact-sec';

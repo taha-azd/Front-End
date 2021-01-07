@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: 'Montserrat', sans-serif;
+}
+// 
+$main-color:#ed143d;
+$lin-ht: 1.5rem;
+$head-fnt-siz: 4rem;
+// 
+.red-text{
+    color: $main-color;
+}
+.white-text{
+    color: aliceblue;
+}
+.up-text{
+    font-size: $head-fnt-siz;
+}
+.container{
+    min-height: 100vh;
+    padding: 0 20px;
+    width: 100%;
+}
+@import 'header';
+@import 'service-sec';
+@import 'prjct-sec';
+@import 'about-me-sec';
+@import 'contact';
+@import 'footer';
